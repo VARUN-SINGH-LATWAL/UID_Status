@@ -19,8 +19,8 @@ out/
 coverage/
 
 # Environment files
-.env
-.env.*.local
+# .env
+# .env.*.local
 
 # OS files
 .DS_Store

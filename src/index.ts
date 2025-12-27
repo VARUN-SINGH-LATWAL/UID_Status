@@ -1,9 +1,12 @@
+import dotenv from "dotenv";
+dotenv.config();
 import express,{Application, Request, Response} from "express";
-import {checkConnection , connection} from './DB/Access'
+import {checkConnection , Tablas} from './DB/Access'
+
 
 const app: Application = express();
 
-const PORT: number = 3000 ;
+const PORT: number = Number(process.env.PORTS ?? 3000) || 3000 ;
 
 checkConnection()
 app.use(express.json());
