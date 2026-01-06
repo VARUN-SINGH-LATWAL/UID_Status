@@ -1,7 +1,8 @@
 import ADODB from "node-adodb";
+import {env} from '../config/env'
 
 
-const dbPath = process.env.Tablas_ACCESS_DB_PATH;
+const dbPath = env.databaseUrl;
 
 // export const Tablas = ADODB.open(
 //   "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\\DataBase\\Tablas.mdb;"

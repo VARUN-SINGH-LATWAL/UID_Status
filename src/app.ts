@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 import express,{Application, Request, Response} from "express";
-import {checkConnection , Tablas} from './DB/Access'
+import {checkConnection , Tablas} from './config'
 
 
 const app: Application = express();
@@ -17,7 +17,4 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 
-
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+export default app;
